@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="warmUp16.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="warmUp16.css"> 
+        
+        
+        <input type="text" id="textAdd" ><button id="creat">Creat</button>
+        <script>
+             $(document).ready(function() {
+                 $('#creat').click(function(){
+                    $('#left').click(function(){
+                        var listLeft=$('#textAdd').val();
+                        $('#ul_left').append('<li>'+listLeft+'</li>');
+                        });
+                });
+            });
+            $(document).ready(function() {
+                $('#creat').click(function() {
+                    $('#right').click(function(){
+                        var listRight=$('#textAdd').val();
+                        $('#ul_right').append('<li>'+listRight+'</li>');
+                        });
+                    });
+            });
+        </script>
+    </head>
+
+    <body>
+
+<div>
+    <div class="column" style="background-color:#aaa;">
+        <button id="left">Left</button>
+        <h2>Left Column</h2>
+        <ul id="ul_left"></ul>
+    </div>
+    <div class="column" style="background-color:#bbb;">
+        <button id="right">Right</button>
+        <h2>Right Column</h2>
+        <ul id="ul_right"></ul>
+    </div>
+  </div>
+</body>
+
+</html>
