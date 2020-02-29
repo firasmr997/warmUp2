@@ -16,3 +16,14 @@
 // Constraints:
 // 1 <= text.length <= 10^4
 // text consists of lower case English letters only.
+function str(string) {
+    var arr=string.split("");
+    var word="balloon";
+    var result=0;
+    for (var i=0; i < arr.length; i++) {
+        if (word.search(arr[i])) {
+            result = result + 1;
+        }
+    } 
+    return result;
+}
